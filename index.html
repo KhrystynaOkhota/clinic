@@ -15,6 +15,7 @@
 
 </head>
 <body>
+
 <div id="loader-wrapper"></div>
 
 <header class="header">
@@ -55,13 +56,22 @@
                     </li>
                 </ul>
             </nav>
+
+            <ul class="lang d-none">
+                <li class="lang-item lang-item-43 lang-item-en lang-item-first"><a lang="en-US" hreflang="en-US"
+                                                                                   href="contacts.html">EN</a>
+                </li>
+                <li class="lang-item lang-item-46 lang-item-uk current-lang"><a lang="uk" hreflang="uk"
+                                                                                href="">UA</a>
+                </li>
+            </ul>
             <a href="" class="btn btn-primary header-btn d-block text-center text-uppercase open-popup" data-rel="more">Записатися
                 на
                 прийом</a>
         </div>
 
 
-        <div class="lang d-none d-md-flex">
+        <div class="lang --relative d-none d-md-flex">
             <div class="lang_i">
 
                 <a href="/uk/">uk</a><!--поточна мова-->
@@ -89,9 +99,44 @@
         </ul>
     </div>
 </header>
+<style>
+    .read-more__text--wrapper {
+        height: 56px;
+        overflow: hidden;
+    }
 
+    .read-more__button {
+        font-size: 12px;
+        line-height: 21px;
+        color: #be0000;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all .3s;
+        -webkit-transition: all .3s
+    }
+
+    .read-more__button:hover {
+        color: #555
+    }
+
+
+    p .read-more__button:not(:hover) {
+        color: inherit !important
+    }
+
+    .read-more__button:not(.active) span:nth-child(2) {
+        display: none
+    }
+
+    .read-more__button.active span:nth-child(1) {
+        display: none
+    }
+</style>
 <main class="main">
-    <section class="banner ">
+    <section class="animation banner">
         <div class="container p-0">
             <div class="row align-right">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 --relative">
@@ -117,7 +162,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="swiper-entry --relative">
+                    <div class="swiper-entry swiper-entry__large --relative">
                         <div class="swiper-container"
                              data-options='{"speed": 1200, "parallax":true, "slidesPerView":1, "spaceBetween": 0, "loop": true, "customFraction": true }'>
                             <div class="swiper-wrapper">
@@ -245,22 +290,25 @@
                             </div>
                         </div>
 
-                        <div class="swiper-controls d-flex  align-middle align-center">
-                            <div class="swiper-button-prev d-flex align-center align-middle">
-                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6 1L1 6.25L6 11" stroke="#fff"/>
-                                </svg>
-                            </div>
+                        <div class="swiper-controls swiper-controls__center d-flex  align-middle align-left">
+                            <div class="swiper-button__wrap d-flex  align-middle align-center">
 
-                            <div class="swiper-button-next d-flex align-center align-middle">
-                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11L6 5.75L1 1" stroke="#fff"/>
-                                </svg>
+                                <div class="swiper-button-prev d-flex align-center align-middle">
+                                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 1L1 6.25L6 11" stroke="#fff"/>
+                                    </svg>
+                                </div>
+
+                                <div class="swiper-button-next d-flex align-center align-middle">
+                                    <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6 5.75L1 1" stroke="#fff"/>
+                                    </svg>
+                                </div>
                             </div>
+                            <div class="swiper-pagination d-flex "></div>
                         </div>
-                        <div class="swiper-pagination d-flex "></div>
                     </div>
 
                 </div>
@@ -268,7 +316,7 @@
         </div>
     </section>
 
-    <section class="section s-results s-results--home achievements-wrapp animation">
+    <section class="animation section s-results s-results--home achievements-wrapp animation">
         <div class="container">
             <div class="row align-middle">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -316,14 +364,16 @@
         </div>
     </section>
 
-    <section class="section s-about s-about--home">
+    <section class="animation section s-about s-about--home">
         <div class="container">
             <div class="row align-middle">
                 <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="s-about__content">
-                        <h4 class="heading text-xl text-uppercase --relative">
+                        <div class="text-line">
+                        <h4 class="heading text-xl text-uppercase --relative text-line__inner">
                             Чому саме берегиня?
                         </h4>
+                        </div>
                         <div class="text text-m">
 
                             <p>Ми використовуємо виключно новітнє обладнання та сучасні методи діагностики!</p>
@@ -352,13 +402,15 @@
         </div>
     </section>
 
-    <section class="section s-services s-services--home">
+    <section class="animation section s-services s-services--home">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h4 class="heading text-xl text-uppercase --relative">
+                    <div class="text-line">
+                    <h4 class="heading text-xl text-uppercase --relative text-line__inner">
                         Наші послуги
                     </h4>
+                    </div>
                 </div>
             </div>
             <div class="row align-center m-row">
@@ -438,109 +490,52 @@
                         </div>
                     </a>
                 </div>
-
-
             </div>
         </div>
 
 
     </section>
 
-    <section class="section s-service-packages">
+    <section class="animation section s-service-packages">
         <div class="container">
             <div class="row align-middle s-team__row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <h4 class="heading text-uppercase text-xl --relative">Наші пакети</h4>
                     <div class="swiper-entry">
                         <div class="swiper-container"
-                             data-options='{"loop":true,"slidesPerView": 1, "spaceBetween": 15,"centeredSlides": true, "speed": 1200,"breakpoints": { "600": {"slidesPerView":1}, "767": {"slidesPerView": 1, "spaceBetween": 30}, "1200": {"slidesPerView": 1, "spaceBetween": 30}}}'>
+                             data-options='{"loop":true,"slidesPerView": 1, "spaceBetween": 15, "effect": "fade",  "speed": 1200,"breakpoints": { "600": {"slidesPerView":1}, "767": {"slidesPerView": 1, "spaceBetween": 30}, "1200": {"slidesPerView": 1, "effect": "fade",  "spaceBetween": 30}}}'>
 
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="packages__item --relative">
+                                    <span class="image-overlay"></span>
+                                    <div class="package__item --relative">
                                         <div class="row align-middle">
                                             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                 <div class="package__content --relative">
-                                                    <div class="package__number">01</div>
-                                                    <div class="package__heading--sub text-uppercase">
-                                                        Жіноче здоров'я
+                                                    <div class="animation-text__wrap package__number--wrap">
+                                                        <div class="package__number animation-text">01</div>
                                                     </div>
-                                                    <div class="package__heading heading-font text-uppercase">
-                                                        Оптимальний
+                                                    <div class="package__inner overlap">
+                                                        <div class="animation-text__wrap mb-18">
+                                                            <div class="package__heading--sub text-uppercase animation-text">
+                                                                Жіноче здоров'я Жіноче здоров'я
+                                                            </div>
+                                                        </div>
+                                                        <div class="wrap animation-text__wrap mb-35">
+                                                            <div class="package__heading heading-font text-uppercase animation-text">
+                                                                Оптимальний
+                                                            </div>
+                                                        </div>
+                                                        <div class="animation-text__wrap">
+                                                            <a href=""
+                                                               class="btn btn-primary   package__more text-center text-uppercase animation-text">Дізнатися
+                                                                більше</a>
+                                                        </div>
                                                     </div>
-                                                    <a href=""
-                                                       class="btn btn-primary   package__more text-center text-uppercase ">Дізнатися
-                                                        більше</a>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <ul class="package__component">
-                                                    <li class="--relative">
-                                                        Консультація гінеколога з оглядом Консультація гінеколога з
-                                                        оглядом Консультація гінеколога з оглядом Консультація
-                                                        гінеколога з оглядом Консультація гінеколога з оглядом
-                                                        Консультація гінеколога з оглядом
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Відеокольпоскопія
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Забір матеріалу на дослідження
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Консультація гінеколога з оглядом
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Відеокольпоскопія
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Забір матеріалу на дослідження
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Консультація гінеколога з оглядом
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Відеокольпоскопія
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Забір матеріалу на дослідження
-                                                    </li>
-                                                </ul>
-
-                                                <a href=""
-                                                   class="btn btn-primary   package__more text-center text-uppercase  ">Дізнатися
-                                                    більше</a>
-                                            </div>
-                                            <div class="col-xl-3 d-none d-xl-flex">
-                                                <div class="package__img--wrap">
-                                                    <img src="assets/img/packages.png" alt="" class="package__img">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="swiper-slide">
-                                    <div class="packages__item --relative">
-                                        <div class="row align-middle">
-                                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <div class="package__content --relative">
-                                                    <div class="package__number">02</div>
-                                                    <div class="package__heading--sub text-uppercase">
-                                                        Жіноче здоров'я
-                                                    </div>
-                                                    <div class="package__heading heading-font text-uppercase">
-                                                        Оптимальний
-                                                    </div>
-                                                    <a href=""
-                                                       class="btn btn-primary   package__more text-center text-uppercase ">Дізнатися
-                                                        більше</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                                                <ul class="package__component">
+                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12  ">
+                                                <ul class="package__component  ">
                                                     <li class="--relative">
                                                         Консультація гінеколога з оглядом Консультація гінеколога з
                                                         оглядом Консультація гінеколога з оглядом Консультація
@@ -587,74 +582,37 @@
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <div class="packages__item --relative">
-                                        <div class="row align-middle">
-                                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-                                                <div class="package__content --relative">
-                                                    <div class="package__number">03</div>
-                                                    <div class="package__heading--sub text-uppercase">
-                                                        Жіноче здоров'я
-                                                    </div>
-                                                    <div class="package__heading heading-font text-uppercase">
-                                                        Оптимальний
-                                                    </div>
-                                                    <a href=""
-                                                       class="btn btn-primary   package__more text-center text-uppercase ">Дізнатися
-                                                        більше</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                                                <ul class="package__component">
-
-                                                    <li class="--relative">
-                                                        Забір матеріалу на дослідження
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Консультація гінеколога з оглядом
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Відеокольпоскопія
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Забір матеріалу на дослідження
-                                                    </li>
-                                                </ul>
-
-                                                <a href=""
-                                                   class="btn btn-primary   package__more text-center text-uppercase  ">Дізнатися
-                                                    більше</a>
-                                            </div>
-                                            <div class="col-xl-3 d-none d-xl-flex">
-                                                <div class="package__img--wrap">
-                                                    <img src="assets/img/packages.png" alt="" class="package__img">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="packages__item --relative">
+                                    <span class="image-overlay"></span>
+                                    <div class="package__item --relative">
                                         <div class="row align-middle">
                                             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                 <div class="package__content --relative">
-                                                    <div class="package__number">04</div>
-                                                    <div class="package__heading--sub text-uppercase">
-                                                        Жіноче здоров'я
+                                                    <div class="animation-text__wrap package__number--wrap">
+                                                        <div class="package__number animation-text">02</div>
                                                     </div>
-                                                    <div class="package__heading heading-font text-uppercase">
-                                                        test test
+                                                    <div class="package__inner overlap">
+                                                        <div class="animation-text__wrap mb-18">
+                                                            <div class="package__heading--sub text-uppercase animation-text">
+                                                                Жіноче здоров'я
+                                                            </div>
+                                                        </div>
+                                                        <div class="wrap animation-text__wrap mb-35">
+                                                            <div class="package__heading heading-font text-uppercase animation-text">
+                                                                Оптимальний
+                                                            </div>
+                                                        </div>
+                                                        <div class="animation-text__wrap">
+                                                            <a href=""
+                                                               class="btn btn-primary   package__more text-center text-uppercase animation-text">Дізнатися
+                                                                більше</a>
+                                                        </div>
                                                     </div>
-                                                    <a href=""
-                                                       class="btn btn-primary   package__more text-center text-uppercase ">Дізнатися
-                                                        більше</a>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
 
-                                                <ul class="package__component">
+                                                <ul class="package__component  ">
                                                     <li class="--relative">
                                                         Консультація гінеколога з оглядом Консультація гінеколога з
                                                         оглядом Консультація гінеколога з оглядом Консультація
@@ -701,43 +659,38 @@
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <div class="packages__item --relative">
+                                    <span class="image-overlay"></span>
+                                    <div class="package__item --relative">
                                         <div class="row align-middle">
                                             <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
                                                 <div class="package__content --relative">
-                                                    <div class="package__number">05</div>
-                                                    <div class="package__heading--sub text-uppercase">
-                                                        Жіноче здоров'я
+                                                    <div class="animation-text__wrap package__number--wrap">
+                                                        <div class="package__number animation-text">03</div>
                                                     </div>
-                                                    <div class="package__heading heading-font text-uppercase">
-                                                        test test
+                                                    <div class="package__inner overlap">
+                                                        <div class="animation-text__wrap mb-18">
+                                                            <div class="package__heading--sub text-uppercase animation-text">
+                                                                Жіноче здоров'я
+                                                            </div>
+                                                        </div>
+                                                        <div class="animation-text__wrap mb-35">
+                                                            <div class="package__heading heading-font text-uppercase animation-text">
+                                                                Оптимальний
+                                                            </div>
+                                                        </div>
+                                                        <div class="animation-text__wrap">
+                                                            <a href=""
+                                                               class="btn btn-primary   package__more text-center text-uppercase animation-text">Дізнатися
+                                                                більше</a>
+                                                        </div>
                                                     </div>
-                                                    <a href=""
-                                                       class="btn btn-primary   package__more text-center text-uppercase ">Дізнатися
-                                                        більше</a>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
 
                                                 <ul class="package__component">
-                                                    <li class="--relative">
-                                                        Консультація гінеколога з оглядом Консультація гінеколога з
-                                                        оглядом Консультація гінеколога з оглядом Консультація
-                                                        гінеколога з оглядом Консультація гінеколога з оглядом
-                                                        Консультація гінеколога з оглядом
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Відеокольпоскопія
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Забір матеріалу на дослідження
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Консультація гінеколога з оглядом
-                                                    </li>
-                                                    <li class="--relative">
-                                                        Відеокольпоскопія
-                                                    </li>
+
                                                     <li class="--relative">
                                                         Забір матеріалу на дослідження
                                                     </li>
@@ -758,12 +711,13 @@
                                             </div>
                                             <div class="col-xl-3 d-none d-xl-flex">
                                                 <div class="package__img--wrap">
-                                                    <img src="assets/img/packages.png" alt="" class="package__img">
+                                                    <img src="assets/img/news-3.png" alt="" class="package__img">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
 
                             </div>
                         </div>
@@ -786,7 +740,7 @@
         </div>
     </section>
 
-    <section class="section s-team">
+    <section class=" animation section s-team">
         <div class="container">
             <div class="row align-middle s-team__row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -797,7 +751,7 @@
 
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="s-team__item --relative">
+                                    <a href="team-inner.html" class="s-team__item --relative">
                                         <div class="s-team__img-wrap">
                                             <img src="https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg"
                                                  class="s-team__img" alt="">
@@ -810,7 +764,7 @@
                                                 Олена андрейків
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="s-team__item --relative">
@@ -913,7 +867,7 @@
         </div>
     </section>
 
-    <section class="section s-partner">
+    <section class="animation section s-partner">
         <div class="container">
             <div class="row align-center --relative">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -1020,7 +974,7 @@
         </div>
     </section>
 
-    <section class="section s-news  s-news--home --relative">
+    <section class="animation section s-news  s-news--home --relative">
         <!-- <img src="https://cdn.pixabay.com/photo/2018/02/08/22/27/flower-3140492_960_720.jpg" alt="" class="s-news__bg">-->
         <img src="assets/img/news.png" alt="" class="s-news__bg">
         <div class="container swiper-entry">
@@ -1117,7 +1071,7 @@
         </div>
     </section>
 
-    <section class="section s-instagram --relative animate-scroll">
+    <section class="animation section s-instagram --relative animate-scroll">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
@@ -1130,7 +1084,7 @@
         </div>
     </section>
 
-    <section class="seo-component">
+    <section class="animation seo-component">
         <div class="container">
             <div class="row ">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12   --relative  read-more">
@@ -1181,6 +1135,58 @@
             </div>
         </div>
     </section>
+
+  <!--  <div class="col-md-8 col-md-offset-2">
+        <article class="simple-article grey"><h1 class="small">Якісний веб дизайн,<br><span>професійне створення</span>
+            сайтів</h1>
+            <div class="portfolio-text-wrapper read-more__text--wrapper">
+                <div class="read-more__text--content"><p>Веб розробка являється поетапним завданням в процесі виконання
+                    якого залучаються кваліфіковані фахівці різних напрямків діяльності. Сучасні сайти відзначаються
+                    багатьма вагомими критеріями. Сюди відноситься якісний <b>веб дизайн</b>, впорядкована структура,
+                    функціональність, унікальний, користний для інтернет спільноти контент, ефективна пошукова
+                    оптимізація. Все перелічене здійснює свій особистий вплив на приріст тематичного трафіку і
+                    формування цільової аудиторії.</p>
+                    <p>Практично будь-який користувач попадаючи на той чи інший ресурс звертає увагу на його зовнішній
+                        вигляд. Саме він говорить про те наскільки серйозним є веб проект та відповідно компанія, якій
+                        він належить. Ми створюємо сайти з сучасним, унікальним дизайном з застосуванням різноманітних
+                        стилів шаблонів, (в залежності від тематичного напрямку), які самі повністю розробляємо. Для
+                        створення якісного, привабливого дизайну застосовуються HTML5, CSS3, Java та SVG технології.
+                        Наша веб студія створює сайти різних категорій серед яких:</p>
+                    <ul>
+                        <li>лендінги;</li>
+                        <li>інтернет магазини;</li>
+                        <li>промо сайти;</li>
+                        <li>анімаційні та корпоративні ресурси.</li>
+                    </ul>
+                    <p>Завдяки високій кваліфікації та відповідному досвіду колег нам під силу <b>розробка веб сайту</b>
+                        будь-якого рівня складності. На даній сторінці Ви маєте змогу в цьому переконатись переглянувши
+                        портфоліо.</p>
+                    <p>Структура майбутнього сайту розробляється на перших етапах його створення. Здійснюється робота
+                        над сторінками з категоріями, підкатегоріями, внутрішніми цільовими сторінками, які між собою
+                        зв'язуються елементами меню. Це стосується практично всіх типів веб сайтів окрім лендінгів, де
+                        сама структура сторінки, яка продає товари та послуги дещо специфічна. Зручна навігація та
+                        впорядкована структура є запорукою того, що користувачі виявлять бажання залишатись довше на
+                        Вашому сайті отримуючи необхідну їм інформацію й при потребі заходитимуть ще. Юзабіліті теж
+                        здійснює вплив на конверсію. Враховуючи даний факт ми працюємо над унікальною структурою для
+                        кожного окремого замовлення, яка б відповідала індивідуальним потребам й була максимально
+                        ефективною.</p>
+                    <p>В процесі <b>створення веб сайту</b> професійні програмісти ретельно працюють над його скриптовою
+                        частиною, що відповідає за функціональність, дієздатність всіх наявних онлайн сервісів. Це
+                        досить важливий момент в розробці практично для кожного вище представленого інтернет ресурсу.
+                        Звертайтесь і ми створимо Вам повноцінну торгову площадку, чи якісний промо сайт під ключ на Ваш
+                        вибір.</p></div>
+            </div>
+        </article>
+        <div class="read-more__button read-more-toggle">
+            <span><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11L6 5.75L1 1" stroke="#40A5D9"></path>
+                            </svg></span>
+            <span><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11L6 5.75L1 1" stroke="#40A5D9"></path>
+                            </svg></span>
+        </div>
+    </div>-->
+
 </main>
 
 <footer class="footer">
@@ -1302,8 +1308,6 @@
     </div>
 </footer>
 
-
-
 <div class="popup-wrapper">
     <div class="bg-layer"></div>
 
@@ -1371,65 +1375,27 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
+
+<script src="assets/js/smoothscroll.js"></script>
+
 <script src="assets/js/customPiechart.js"></script><!-- тільки на гололвній сторінці -->
 
-
-
-<!--
 <script>
-
-    $('.preload__wrap').on('click', function () {
-        $(this).find(".preload").css({
-            'z-index': -1,
-            'opacity': 0
-        });
-        $(this).find("video").css({"display": "block"});
-        $(this).find("video").trigger('play');
-
+    $(".read-more-toggle").on("click", function () {
+        var e = $(this).parent();
+        $(this).hasClass("active") ? e.find(".read-more__text--wrapper").animate({
+            height: 56
+        }) : e.find(".read-more__text--wrapper").animate({
+            height: e.find(".read-more__text--content").height()
+        }, function () {
+            $(this).css({
+                height: "auto"
+            });
+            $(this).toggleClass("red");
+        }),
+            $(this).toggleClass("active")
     });
 </script>
-
-
-
-<script>
-   // $(window).resize(function () {
-        if ($(window).width() < 767) {
-            $(".s-services--home").each(function () {
-
-                const $items = $(this).find(".s-services__column");
-                if ($items.length > 4) {
-                    $items.each(function (i) {
-                        if (i > 2) $(this).hide();
-                    });
-                    const $this = $(this);
-                    const $showMore = $("<a>").attr("href", "").addClass("showmore").text("Показати більше").click(function () {
-                        $this.find(".s-services__column").show();
-                        $(this).hide();
-                        $this.find(".showless").addClass('d-block');
-                        return false;
-                    });
-                    const $showLess = $("<a>").attr("href", "").addClass("showless").text("Згорнути").click(function () {
-                        if ($items.length > 4) {
-                            $items.each(function (i) {
-                                if (i > 2) $(this).hide();
-                            });
-                        }
-                        $this.find(".showmore").show();
-                        $this.find(".showless").removeClass('d-block');
-                        return false;
-                    });
-                    $(this).append($showMore);
-                    $(this).append($showLess);
-                }
-            })
-
-        }
-
-   // });
-
-</script>-->
-
-
 </body>
 </html>
 
