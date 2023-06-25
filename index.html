@@ -29,7 +29,7 @@
         </div>
 
         <a href="index.html" class="header-logo align-middle">
-            <img src="assets/img/logo.svg" alt="logo company" class="header-logo__icon">
+            <img src="assets/img/logo.png" alt="logo company" class="header-logo__icon">
         </a>
 
         <div class="navbar">
@@ -58,38 +58,41 @@
                 </ul>
             </nav>
 
-            <ul class="lang d-none">
-                <li class="lang-item lang-item-43 lang-item-en lang-item-first"><a lang="en-US" hreflang="en-US"
-                                                                                   href="contacts.html">EN</a>
+
+            <a href="" class="btn header-btn d-none d-md-block text-center text-uppercase open-popup" data-rel="more">
+                <span class="d-inline">Записатися на прийом</span>
+                <span>Записатися</span></a>
+            <div class="lang --relative d-none d-md-flex">
+                <div class="lang_i">
+
+                    <a href="/uk/">uk</a><!--поточна мова-->
+
+
+                    <ul class="lang">
+                        <li class="lang-item lang-item-43 lang-item-en lang-item-first"><a lang="en-US" hreflang="en-US"
+                                                                                           href="contacts.html">EN</a>
+                        </li>
+                        <li class="lang-item lang-item-46 lang-item-uk current-lang"><a lang="uk" hreflang="uk"
+                                                                                        href="">UA</a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <ul class="header-contacts d-flex d-xl-none align-middle ">
+                <li>
+                    <a href="tel:+380687011159"><img src="assets/img/phone.svg" alt="icon phone"></a>
                 </li>
-                <li class="lang-item lang-item-46 lang-item-uk current-lang"><a lang="uk" hreflang="uk"
-                                                                                href="">UA</a>
+                <li>
+                    <a href=""><img src="assets/img/place.svg" alt="icon location"></a>
                 </li>
             </ul>
-            <a href="" class="btn btn-primary header-btn d-block text-center text-uppercase open-popup" data-rel="more">Записатися
-                на
-                прийом</a>
         </div>
 
 
-        <div class="lang --relative d-none d-md-flex">
-            <div class="lang_i">
+        <a href="" class="btn header-btn d-block d-md-none text-center text-uppercase open-popup" data-rel="more">Записатися</a>
 
-                <a href="/uk/">uk</a><!--поточна мова-->
-
-
-                <ul class="lang">
-                    <li class="lang-item lang-item-43 lang-item-en lang-item-first"><a lang="en-US" hreflang="en-US"
-                                                                                       href="contacts.html">EN</a>
-                    </li>
-                    <li class="lang-item lang-item-46 lang-item-uk current-lang"><a lang="uk" hreflang="uk"
-                                                                                    href="">UA</a>
-                    </li>
-                </ul>
-
-
-            </div>
-        </div>
         <ul class="header-contacts d-none d-xl-flex align-middle ">
             <li>
                 <a href="tel:+380687011159"><img src="assets/img/phone.svg" alt="icon phone"></a>
@@ -100,6 +103,8 @@
         </ul>
     </div>
 </header>
+
+
 <style>
     .read-more__text--wrapper {
         height: 56px;
@@ -1371,8 +1376,8 @@
                     </div>
 
                     <div class="row">
-                        <div class="ol-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form-group payment d-flex align-middle align-center">
+                        <div class="ol-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group__wrap">
+                            <div class="form-group  d-flex align-middle align-center">
 
                                 <label class="radio-entry">
                                     <input type="radio" class="radio-entry__input" name="payment" value="payment1">
@@ -1384,7 +1389,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="ol-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="ol-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group__wrap">
                             <div class="form-group__title text-uppercase text-center">Наш менеджер зв’яжеться з Вами
                             </div>
                             <div class="form-group messenger d-flex align-middle align-center">
