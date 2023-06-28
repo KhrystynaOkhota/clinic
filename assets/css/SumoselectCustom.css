@@ -89,7 +89,7 @@
 .SumoSelect.open > .CaptionCont > span.placeholder {
     opacity: 1;
 }
-
+/*
 .SumoSelect > .CaptionCont > label {
     cursor: pointer;
     display: block;
@@ -101,7 +101,7 @@
     background: url(../img/ar-bottom.svg) no-repeat center;
     color: transparent;
     text-align: center;
-}
+}*/
 
 .SumoSelect > .CaptionCont > label > i {
     background-image: none;
